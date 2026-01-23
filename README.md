@@ -140,14 +140,14 @@ sudo apt update
 sudo apt install docker-ce docker-ce-cli containerd.io -y
 docker --version
 docker run hello-world
-
+```
 ### 2.pull an image
-
+```
 docker pull python:3.10
 docker images
-
+```
 ### 3.run stop and remove conatiner
-
+```
 docker run -it python:3.10
 exit
 docker ps
@@ -155,8 +155,9 @@ docker ps -a
 docker stop <container_id>
 docker rm <container_id>
 docker rmi python:3.10
-
+```
 ### 4.python docker application
+```
 mkdir docker-python-app
 cd docker-python-app
 nano app.py
@@ -172,22 +173,27 @@ docker run my-python-app
 mkdir streamlit-docker-app
 cd streamlit-docker-app
 git init
-
+```
 ## cretae streamlit app
+```
 nano app.py
-
+```
 ## step 3 run streamlit app locally
+```
 pip3 install streamlit
 streamlit run app.py
-
+```
 ## create requirements file
+```
 nano requirements.txt
-
+```
 
 ## write a dockerfile for streamlit app
+```
 nano Dockerfile
-
+```
 ### build and run docker container
+```
 docker build -t streamlit-app .
 docker run -p 8501:8501 streamlit-app
 ```
@@ -217,4 +223,4 @@ git push -u origin main
 git tag v1.0
 git push origin v1.0
 ```
-change in the github web.
+
