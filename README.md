@@ -166,7 +166,7 @@ nano dockerfile
 docker build -t my-python-app .
 docker run my-python-app
 ```
-### capstone project
+# Capstone project
 
 ## create new git repo
 ```
