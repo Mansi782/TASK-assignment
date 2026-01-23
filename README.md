@@ -26,7 +26,7 @@ touch README.md
 git status
 git add README.md
 git commit -m "Initial commit: added README file"
-
+```
 ---
 
 ## Task 2: Branching and Merging
@@ -91,7 +91,7 @@ git commit -m "Resolved merge conflict in README"
 
 git branch -d conflict-branch-1
 git branch -d conflict-branch-2
-
+```
 ---
 
 ## Task 4: Working with Remote Repository (GitHub)
@@ -125,7 +125,7 @@ git log --oneline
 git rebase -i HEAD~5
 git rebase --continue
 git push --force
-
+```
 # Docker, Streamlit & Git – Capstone Project
 
 This repository documents the complete workflow of Docker basics, a simple Python Docker application, and a capstone project using Streamlit, Docker, and Git.
@@ -164,11 +164,11 @@ nano dockerfile
 
 docker build -t my-python-app .
 docker run my-python-app
-
+```
 ### capstone project
 
 ## create new git repo
-
+```
 mkdir streamlit-docker-app
 cd streamlit-docker-app
 git init
@@ -190,11 +190,12 @@ nano Dockerfile
 ### build and run docker container
 docker build -t streamlit-app .
 docker run -p 8501:8501 streamlit-app
+```
 ### access application via browser
 
 http://localhost:8501
 ### use git branching
-
+```
 git checkout -b dev
 git add app.py
 git commit -m "Add Streamlit app"
@@ -202,17 +203,18 @@ git commit -m "Add Streamlit app"
 git checkout -b docker
 git add Dockerfile requirements.txt
 git commit -m "Dockerize Streamlit app"
+```
 ### merge branches
-
+```
 git checkout main
 git merge dev
 git merge docker
-
+```
 ### push to github and tag release
-
+```
 git remote add origin https://github.com/<username>/<repo-name>.git
 git push -u origin main
 git tag v1.0
 git push origin v1.0
-
+```
 change in the github web.
