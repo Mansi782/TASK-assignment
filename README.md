@@ -51,6 +51,7 @@ git commit -m "Updated README from feature branch"
 git checkout main
 git merge feature-readme-update
 git branch -d feature-readme-update
+```
 
 ### handling merger conflict
 
