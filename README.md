@@ -125,4 +125,93 @@ git rebase -i HEAD~5
 git rebase --continue
 git push --force
 
+# Docker, Streamlit & Git – Capstone Project
+
+This repository documents the complete workflow of Docker basics, a simple Python Docker application, and a capstone project using Streamlit, Docker, and Git.
+
+---
+
+##  Docker Basics (Hello World + Python App)
+
+### 1. Install and Verify Docker
+```bash
+sudo apt update
+sudo apt install docker-ce docker-ce-cli containerd.io -y
+docker --version
+docker run hello-world
+
+### 2.pull an image
+
+docker pull python:3.10
+docker images
+
+### 3.run stop and remove conatiner
+
+docker run -it python:3.10
+exit
+docker ps
+docker ps -a
+docker stop <container_id>
+docker rm <container_id>
+docker rmi python:3.10
+
+### 4.python docker application
+mkdir docker-python-app
+cd docker-python-app
+nano app.py
+nano dockerfile
+
+docker build -t my-python-app .
+docker run my-python-app
+
+### capstone project
+
+## create new git repo
+
+mkdir streamlit-docker-app
+cd streamlit-docker-app
+git init
+
+## cretae streamlit app
+nano app.py
+
+## step 3 run streamlit app locally
+pip3 install streamlit
+streamlit run app.py
+
+## create requirements file
+nano requirements.txt
+
+
+## write a dockerfile for streamlit app
+nano Dockerfile
+
+### build and run docker container
+docker build -t streamlit-app .
+docker run -p 8501:8501 streamlit-app
+### access application via browser
+
+http://localhost:8501
+### use git branching
+
+git checkout -b dev
+git add app.py
+git commit -m "Add Streamlit app"
+
+git checkout -b docker
+git add Dockerfile requirements.txt
+git commit -m "Dockerize Streamlit app"
+### merge branches
+
+git checkout main
+git merge dev
+git merge docker
+
+### push to github and tag release
+
+git remote add origin https://github.com/<username>/<repo-name>.git
+git push -u origin main
+git tag v1.0
+git push origin v1.0
+
 change in the github web.
