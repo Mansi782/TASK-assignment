@@ -1,0 +1,25 @@
+pwd
+ls
+ls -l
+ls -a
+ls -la
+
+cd directory_name
+cd ..
+cd ~
+
+mkdir folder_name
+rmdir empty_folder
+
+touch file.txt
+
+cp source_file destination_file
+cp -r source_directory destination_directory
+
+mv old_name new_name
+mv file.txt folder/
+
+rm file.txt
+rm -r folder_name
+
+clear
